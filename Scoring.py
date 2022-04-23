@@ -92,25 +92,30 @@ def main():
     print()
     print()
     print("SCOREBOARD")
+    sleep(1)
     # Score Display
     for symbol in symbol_board:
-        sleep(0.2)
+        sleep(0.002)
         print(symbol, end = "    ")
     print()
     for i in range(10):
-        sleep(0.2)
+        #sleep(0.002)
         print(sum(frame_board[:i+1]) , end="   ")
     end_message = "FINAL SCORE: " + str(sum(frame_board))
     print()
-    for i in range(len(end_message)):
-        sleep(0.1)
-        print(end_message[i], end="")
+    sleep(1)
+    print(end_message)
+    #for i in range(len(end_message)):
+        #sleep(0.001)
+        #print(end_message[i], end="")
     perfect = "PERFECT GAME!!!"
     if sum(frame_board) == 300:
+        sleep(1)
         print()
-        for i in range(len(perfect)):
-            sleep(0.1)
-            print(perfect[i], end="")
+        #for i in range(len(perfect)):
+            #sleep(0.001)
+            #print(perfect[i], end="")
+        print(perfect)
         
 if __name__ == "__main__":
     main()
